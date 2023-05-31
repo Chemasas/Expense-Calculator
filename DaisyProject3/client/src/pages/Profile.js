@@ -6,6 +6,7 @@ import { useQuery } from '@apollo/client';
 import ExpenseList from '../components/ExpenseList';
 import ExpenseForm from '../components/ExpenseForm';
 
+
 import { QUERY_SINGLE_PROFILE, QUERY_ME } from '../utils/queries';
 
 import Auth from '../utils/auth';
@@ -53,11 +54,13 @@ const Profile = () => {
           expenses={profile.expenses}
           isLoggedInUser={!profileId && true}
         />
+        
       )}
 
       <div className="my-4 p-4" style={{ border: '1px dotted #1a1a1a' }}>
         <ExpenseForm profileId={profile._id} />
       </div>
+      
     </div>
   );
 };

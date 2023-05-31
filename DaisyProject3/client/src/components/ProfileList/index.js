@@ -5,6 +5,7 @@ const ProfileList = ({ profiles, title }) => {
   if (!profiles.length) {
     return <h3>No Profiles Yet</h3>;
   }
+  
 
   return (
     <div>

@@ -69,12 +69,12 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
-    // Make it so a logged in user can only remove a expense from their own profile
-    removeExpense: async (parent, { expense }, context) => {
+    //  remove a expense 
+    removeExpense: async (parent, { expenses }, context) => {
       if (context.user) {
         return Profile.findOneAndUpdate(
           { _id: context.user._id },
-          { $pull: { expenses: expense } },
+          { $pull: { expenses: expenses } },
           { new: true }
         );
       }

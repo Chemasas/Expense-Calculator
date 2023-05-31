@@ -35,8 +35,8 @@ export const LOGIN_USER = gql`
 `;
 
 export const REMOVE_EXPENSE = gql`
-  mutation removeExpense($expense: String!) {
-    removeExpense(expense: $expense) {
+  mutation removeExpense($expenses: String!) {
+    removeExpense(expenses: $expenses) {
       _id
       name
       expenses
