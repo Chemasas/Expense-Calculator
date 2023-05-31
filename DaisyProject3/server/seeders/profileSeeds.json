@@ -1,21 +1,34 @@
 [
   {
-    "name": "Mary Atieno",
-    "email": "mary@daisy.com",
-    "password": "mary1",
-    "expenses": ["groceries", "holiday", "fees"]
+    "name": "Groceries",
+    "email": "g@daisy.com",
+    "password": "11111",
+    "expenses": [""]
   },
   {
-    "name": "Brian Bett",
-    "email": "brian@daisy.com",
-    "password": "brian1",
-    "expenses": ["bills", "furniture", "trips", "pets"]
+    "name": "Entertainment",
+    "email": "e@daisy.com",
+    "password": "11111",
+    "expenses": [""]
   },
   {
-    "name": "Billy Kip",
-    "email": "billy@daisy.com",
-    "password": "billy1",
-    "expenses": ["holiday", "morgage", "netflix"]
+    "name": "Bills",
+    "email": "b@daisy.com",
+    "password": "11111",
+    "expenses": [""]
+  },
+  {
+    "name": "Clothing",
+    "email": "c@daisy.com",
+    "password": "11111",
+    "expenses": [""]
+  },
+  {
+    "name": "Furniture",
+    "email": "f@daisy.com",
+    "password": "11111",
+    "expenses": [""]
   }
+
   
 ]

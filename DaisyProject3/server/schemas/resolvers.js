@@ -62,6 +62,23 @@ const resolvers = {
       // If user attempts to execute this mutation and isn't logged in, throw an error
       throw new AuthenticationError('You need to be logged in!');
     },
+    addAmount: async (parent, { profileId, amount }, context) => {
+      // If context has a `user` property, that means the user executing this mutation has a valid JWT and is logged in
+      if (context.user) {
+        return Profile.findOneAndUpdate(
+          { _id: profileId },
+          {
+            $addToSet: { amount: amount },
+          },
+          {
+            new: true,
+            runValidators: true,
+          }
+        );
+      }
+      // If user attempts to execute this mutation and isn't logged in, throw an error
+      throw new AuthenticationError('You need to be logged in!');
+    },
     // Set up mutation so a logged in user can only remove their profile and no one else's
     removeProfile: async (parent, args, context) => {
       if (context.user) {

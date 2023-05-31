@@ -21,6 +21,15 @@ export const ADD_EXPENSE = gql`
     }
   }
 `;
+export const ADD_AMOUNT = gql`
+  mutation addAmount($profileId: ID!, $amount: String!) {
+    addExpense(profileId: $profileId, amount: $amount) {
+      _id
+      name
+      amount
+    }
+  }
+`;
 
 export const LOGIN_USER = gql`
   mutation login($email: String!, $password: String!) {
@@ -34,6 +43,7 @@ export const LOGIN_USER = gql`
   }
 `;
 
+
 export const REMOVE_EXPENSE = gql`
   mutation removeExpense($expenses: String!) {
     removeExpense(expenses: $expenses) {
@@ -43,3 +53,13 @@ export const REMOVE_EXPENSE = gql`
     }
   }
 `;
+export const REMOVE_AMOUNT = gql`
+  mutation removeAmount($amount: String!) {
+    removeAmount(amount: $amount) {
+      _id
+      name
+      amount
+    }
+  }
+`;
+

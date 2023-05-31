@@ -26,8 +26,11 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
 
     addExpense(profileId: ID!, expenses: String!): Profile
+    addAmount(profileId: ID!, expenses: String!): Profile
     removeProfile: Profile
     removeExpense(expenses: String!): Profile
+    removeAmount(amount: String!): Profile
+
   }
 `;
 

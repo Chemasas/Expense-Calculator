@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 
 import { ADD_EXPENSE } from '../../utils/mutations';
+import { ADD_AMOUNT } from '../../utils/mutations';
 
 import Auth from '../../utils/auth';
 
@@ -12,6 +13,7 @@ const ExpenseForm = ({ profileId }) => {
 
 
   const [addExpenses, { error }] = useMutation(ADD_EXPENSE);
+  const [addAmount] = useMutation(ADD_AMOUNT);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -20,6 +22,10 @@ const ExpenseForm = ({ profileId }) => {
       const data = await addExpenses({
         variables: { profileId, expenses },
       });
+      const amount = await addAmount({
+        variables: { profileId, amount },
+      });
+
 
       setExpense('');
       setAmount('');
@@ -44,6 +50,13 @@ const ExpenseForm = ({ profileId }) => {
               className="form-input w-100"
               onChange={(event) => setExpense(event.target.value)}
             />
+            <input
+              placeholder="Enter amount"
+              value={amount}
+              className="form-input w-100"
+              onChange={(event) => setAmount(event.target.value)}
+            />
+
             
           </div>
 
