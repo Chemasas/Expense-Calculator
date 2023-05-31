@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Mary Atieno",
+    "email": "mary@daisy.com",
+    "password": "mary1",
+    "expenses": ["groceries", "holiday", "fees"]
+  },
+  {
+    "name": "Brian Bett",
+    "email": "brian@daisy.com",
+    "password": "brian1",
+    "expenses": ["bills", "furniture", "trips", "pets"]
+  },
+  {
+    "name": "Billy Kip",
+    "email": "billy@daisy.com",
+    "password": "billy1",
+    "expenses": ["holiday", "morgage", "netflix"]
+  }
+  
+]
