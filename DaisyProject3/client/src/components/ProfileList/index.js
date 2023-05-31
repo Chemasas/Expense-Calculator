@@ -19,7 +19,7 @@ const ProfileList = ({ profiles, title }) => {
                   {profile.name} <br />
                   <span className="text-white" style={{ fontSize: '1rem' }}>
                     
-                    {profile.expenses && profile.expenses.length === 1 ? '' : ''}
+                   {profile.expenses && profile.expenses.length === 1 ? '' : ''}
                   </span>
                 </h4>
 
